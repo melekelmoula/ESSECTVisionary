@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="Panel" fx:id="Panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="933.0" style="-fx-border-radius: 45; -fx-background-radius: 45; -fx-border-width: 1; -fx-border-color: black;" stylesheets="/com/devmate/java/Admin/LightTheme.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.devmate.java.Professor.ProfessorResultsTableController">
+    <children>
+
+
+        <TreeTableView fx:id="Table" fixedCellSize="0.0" layoutX="31.0" layoutY="17.0" prefHeight="443.0" prefWidth="861.0">
+            <columns>
+            <TreeTableColumn fx:id="PathColumn" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="  Path" />
+                <TreeTableColumn fx:id="GroupColumn" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="Group" />
+                <TreeTableColumn fx:id="SubjectColumn" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="Subject" />
+            <TreeTableColumn fx:id="StudentColumn" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="Student" />
+            <TreeTableColumn fx:id="MainIDColumn" maxWidth="85.0" minWidth="53.0" prefWidth="70.0" text="MainID" visible="false" />
+            <TreeTableColumn fx:id="ExamIDColumn" maxWidth="85.0" minWidth="53.0" prefWidth="70.0" text="Exam ID" />
+            <TreeTableColumn fx:id="ScoreColumn" maxWidth="141.0" minWidth="71.0" prefWidth="78.0" text="Score" />
+            <TreeTableColumn fx:id="StudentAnswerColumn" maxWidth="138.0" minWidth="85.0" prefWidth="127.0" />
+            <TreeTableColumn fx:id="AiColumn" maxWidth="115.0" minWidth="85.0" prefWidth="89.0" />
+            </columns>
+        </TreeTableView>
+        <Pane fx:id="EditingPanel" layoutX="43.0" layoutY="462.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="96.0" prefWidth="844.0">
+            <children>
+            <Label fx:id="errorMessageLabel" layoutX="22.0" layoutY="66.0" prefHeight="17.0" prefWidth="743.0" />
+
+                <MFXButton fx:id="UpdateButton" contentDisplay="CENTER" depthLevel="LEVEL4" layoutX="774.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="44.0" rippleAnimateBackground="false" rippleColor="#dadada" text=" " textFill="TRANSPARENT">
+                    <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="31.0" preserveRatio="true">
+                            <image>
+                                <Image url="@../Admin/Update.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="0.01" />
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                </MFXButton>
+            <Spinner fx:id="newscorespinner" layoutX="636.0" layoutY="26.0" prefHeight="25.0" prefWidth="113.0" />
+
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="Panel" fx:id="Panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="933.0" style="-fx-border-radius: 35; -fx-background-radius: 35; -fx-border-width: 0;" stylesheets="@LightTheme.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.devmate.java.Admin.AdminPathTableController">
+   <children>
+       <TreeTableView fx:id="Table" editable="true" fixedCellSize="0.0" layoutX="31.0" layoutY="17.0" prefHeight="443.0" prefWidth="861.0">
+           <columns>
+            <TreeTableColumn fx:id="PathColumn" prefWidth="210.0" text="Name" />
+               <TreeTableColumn fx:id="TotalStudent" prefWidth="210.0" text="Total Students" />
+               <TreeTableColumn fx:id="TotalSubject" prefWidth="210.0" text="Total Subjects" />
+            <TreeTableColumn fx:id="TotalGroup" prefWidth="210.0" text="Total Groups" />
+
+              </columns>
+       </TreeTableView>
+      <Pane fx:id="EditingPanel" layoutX="29.0" layoutY="460.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="82.0" prefWidth="875.0">
+         <children>
+              <TextField fx:id="PathField" layoutX="14.0" layoutY="35.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="26.0" prefWidth="180.0" promptText="Path Name" />
+             <MFXButton fx:id="AddButton" contentDisplay="CENTER" depthLevel="LEVEL4" layoutX="220.0" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="44.0" rippleAnimateBackground="false" rippleColor="#dadada" text=" " textFill="TRANSPARENT">
+                 <graphic>
+                     <ImageView fitHeight="39.0" fitWidth="34.0" preserveRatio="true">
+                         <image>
+                             <Image url="@Add.png" />
+                         </image>
+                         <effect>
+                             <ColorAdjust brightness="0.01" />
+                         </effect>
+                     </ImageView>
+                 </graphic>
+             </MFXButton>
+             <MFXButton fx:id="UpdateButton" depthLevel="LEVEL4" disable="true" layoutX="208.0" layoutY="31.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="44.0" rippleAnimateBackground="false" rippleColor="#dadada" text=" " textFill="TRANSPARENT" visible="false">
+                 <graphic>
+                     <ImageView fitHeight="28.0" fitWidth="31.0" preserveRatio="true">
+                         <image>
+                             <Image url="@Update.png" />
+                         </image>
+                         <effect>
+                             <ColorAdjust brightness="0.1" />
+                         </effect>
+                     </ImageView>
+                 </graphic>
+             </MFXButton>
+             <MFXButton fx:id="DeleteButton" contentDisplay="CENTER" depthLevel="LEVEL4" disable="true" layoutX="250.0" layoutY="31.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="38.0" rippleAnimateBackground="false" rippleColor="#dadada" text=" " textFill="TRANSPARENT" visible="false">
+                 <graphic>
+                     <ImageView fitHeight="23.0" fitWidth="23.0" nodeOrientation="INHERIT" preserveRatio="true">
+                         <image>
+                             <Image url="@Exit.png" />
+                         </image>
+                         <effect>
+                             <ColorAdjust brightness="0.02" />
+                         </effect>
+   
+                        </ImageView>
+                 </graphic>
+             </MFXButton>
+             <Label fx:id="errorMessageLabel" alignment="TOP_LEFT" layoutX="27.0" layoutY="66.0" prefHeight="17.0" prefWidth="418.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

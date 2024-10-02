@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.*?>
+<?import io.github.palexdev.materialfx.controls.legacy.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="Panel" fx:id="Panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="933.0" style="-fx-border-radius: 45; -fx-background-radius: 45; -fx-border-width: 1; -fx-border-color: black;" stylesheets="/com/devmate/java/Admin/LightTheme.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.devmate.java.Professor.ProfessorExamsTableController">
+    <children>
+
+
+        <TreeTableView fx:id="Table" fixedCellSize="0.0" layoutX="31.0" layoutY="17.0" prefHeight="443.0" prefWidth="861.0">
+            <columns>
+            <TreeTableColumn fx:id="PathColumn" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="  Path" />
+                <TreeTableColumn fx:id="GroupColumn" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="Group" />
+                <TreeTableColumn fx:id="SubjectColumn" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="Subject" />
+            <TreeTableColumn fx:id="IDColumn" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" sortable="false" text="Exam ID" />
+            <TreeTableColumn fx:id="YearColumn" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="Exam Year" />
+            <TreeTableColumn fx:id="ExamFileColumn" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" />
+            <TreeTableColumn fx:id="ExamCorrectionFileColumn" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" />
+            <TreeTableColumn fx:id="MainIDColumn" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" sortable="false" text="Exam ID" visible="false" />
+            </columns>
+        </TreeTableView>
+        <Pane fx:id="EditingPanel" layoutX="41.0" layoutY="462.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="96.0" prefWidth="846.0">
+            <children>
+
+                <Button fx:id="uploadExamButton" contentDisplay="CENTER" layoutX="573.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleUploadExam" prefHeight="36.0" prefWidth="38.0" style="-fx-background-color: transparent;" text=" " textFill="TRANSPARENT">
+                    <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="33.0" nodeOrientation="INHERIT" preserveRatio="true">
+                            <image>
+                                <Image url="@../Admin/Download.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="0.01" hue="-0.05" saturation="-0.02" />
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <Button fx:id="uploadCorrectionButton" contentDisplay="CENTER" layoutX="675.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleUploadCorrection" prefHeight="36.0" prefWidth="38.0" style="-fx-background-color: transparent;" text=" " textFill="TRANSPARENT">
+                    <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="33.0" nodeOrientation="INHERIT" preserveRatio="true">
+                            <image>
+                                <Image url="@../Admin/Download.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="0.01" hue="-0.05" saturation="-0.02" />
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <MFXButton fx:id="AddButton" contentDisplay="CENTER" depthLevel="LEVEL4" layoutX="770.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleSubmit" prefHeight="36.0" prefWidth="44.0" rippleAnimateBackground="false" rippleColor="#dadada" text=" " textFill="TRANSPARENT">
+                    <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="34.0" preserveRatio="true">
+                            <image>
+                                <Image url="@../Admin/Add.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="0.01" />
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                </MFXButton>
+                <Label fx:id="errorMessageLabel" alignment="TOP_LEFT" layoutX="14.0" layoutY="76.0" prefHeight="17.0" prefWidth="798.0" />
+                <MFXLegacyComboBox fx:id="PathComboBox" layoutX="29.0" layoutY="32.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0">
+               <effect>
+                  <ColorAdjust brightness="0.01" />
+               </effect>
+            </MFXLegacyComboBox>
+                <MFXLegacyComboBox fx:id="GroupComboBox" layoutX="206.0" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0">
+               <effect>
+                  <ColorAdjust brightness="0.01" />
+               </effect></MFXLegacyComboBox>
+                <MFXLegacyComboBox fx:id="SubjectComboBox" layoutX="382.0" layoutY="32.0" prefHeight="25.0" prefWidth="150.0">
+               <effect>
+                  <ColorAdjust brightness="0.01" />
+               </effect></MFXLegacyComboBox>
+            <Label id="subjectLabel" fx:id="ExamLabel" layoutX="570.0" layoutY="49.0" maxWidth="50.0" text="Exam File" />
+            <Label id="subjectLabel" fx:id="CorrectionLabel" layoutX="656.0" layoutY="49.0" maxHeight="100.0" maxWidth="80.0" text="Correction File" />
+            <MFXButton fx:id="DeleteButton" contentDisplay="CENTER" depthLevel="LEVEL4" disable="true" layoutX="770.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleSubmit" prefHeight="36.0" prefWidth="44.0" rippleAnimateBackground="false" rippleColor="#dadada" text=" " textFill="TRANSPARENT" visible="false">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="23.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../Admin/Exit.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust brightness="0.01" />
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </MFXButton>
+
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

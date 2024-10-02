@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- login.fxml -->
+
+<?import io.github.palexdev.materialfx.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="MainLogin" prefHeight="727.0" prefWidth="1080.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.devmate.java.LoginController">
+   <children>
+      <Pane layoutX="1.0" layoutY="23.0" prefHeight="678.0" prefWidth="1078.0" style="-fx-background-radius: 35; -fx-border-radius: 42; -fx-border-color: white; -fx-border-width: 2;">
+
+         <children>
+
+             <ImageView fitHeight="674.0" fitWidth="1074.0" layoutX="2.0" layoutY="2.0" nodeOrientation="INHERIT">
+                 <image>
+                     <Image url="@Admin/Background.png" />
+                 </image>
+                 <effect>
+                     <ColorAdjust brightness="-0.39" contrast="-0.35" saturation="-0.52" />
+                 </effect>
+             </ImageView>
+            <Pane layoutX="65.0" layoutY="108.0" prefHeight="433.0" prefWidth="409.0" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-radius: 20; -fx-background-color: white;">
+               <children>
+                  <Pane fx:id="LogPane" layoutX="40.0" layoutY="131.0" prefHeight="260.0" prefWidth="322.0">
+                     <children>
+                          <TextField id="CustomMFXcheck" fx:id="usernameField" alignment="CENTER" focusTraversable="false" layoutX="22.0" prefHeight="33.0" prefWidth="277.0" promptText="Username" style="-fx-background-color: white;" />
+                          <PasswordField id="CustomMFXcheck" fx:id="passwordField" alignment="CENTER" focusTraversable="false" layoutX="21.0" layoutY="56.0" prefHeight="33.0" prefWidth="277.0" promptText="Password" style="-fx-background-color: white;">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </PasswordField>
+                          <ComboBox id="CustomMFXcheck" fx:id="roleComboBox" focusTraversable="false" layoutX="27.0" layoutY="124.0" prefHeight="33.0" prefWidth="270.0" styleClass=".mfx-legacy-combo-box" stylesheets="@Admin/LightTheme.css">
+
+                          </ComboBox>
+                          <ImageView fitHeight="17.0" fitWidth="15.0" layoutX="29.0" layoutY="8.0" nodeOrientation="INHERIT">
+                              <image>
+                                  <Image url="@Admin/User.png" />
+                              </image>
+                              <effect>
+                                  <ColorAdjust brightness="0.02" />
+                              </effect>
+                          </ImageView>
+                          <ImageView fitHeight="18.0" fitWidth="19.0" layoutX="27.0" layoutY="62.0" nodeOrientation="INHERIT" preserveRatio="true">
+                              <image>
+                                  <Image url="@Admin/Password.png" />
+                              </image>
+                              <effect>
+                                  <ColorAdjust brightness="0.37" />
+                              </effect>
+                          </ImageView>
+                          <MFXButton fx:id="LoginButton" buttonType="RAISED" computeRadiusMultiplier="false" depthLevel="LEVEL0" layoutY="215.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="322.0" rippleAnimateBackground="false" rippleAnimationSpeed="0.0" rippleBackgroundOpacity="0.0" rippleColor="#bdbdbd" rippleRadius="20.0" rippleRadiusMultiplier="5.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-background-color: #29455f;" text="Login" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic" size="18.0" />
+                           </font>
+                        </MFXButton>
+                        <Button fx:id="RecoverButton" layoutX="202.0" layoutY="167.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-width: 0;" text="Forgot account ?" textFill="#8d8b8b" />
+                         <ImageView fitHeight="17.0" fitWidth="15.0" layoutX="29.0" layoutY="8.0" nodeOrientation="INHERIT">
+                             <image>
+                                 <Image url="@Admin/User.png" />
+                             </image>
+                             <effect>
+                                 <ColorAdjust brightness="0.02" />
+                             </effect>
+                         </ImageView>
+                     </children>
+
+                  </Pane>
+                  <Pane fx:id="RecoverPane" disable="true" layoutX="40.0" layoutY="177.0" visible="false">
+                     <children>
+                        <TextField fx:id="emailField" alignment="CENTER" focusTraversable="false" layoutX="33.0" prefHeight="33.0" prefWidth="254.0" promptText="Email" style="-fx-background-color: white;" />
+                        <MFXButton fx:id="SubmitButton" buttonType="RAISED" computeRadiusMultiplier="false" depthLevel="LEVEL0" layoutY="64.0" mnemonicParsing="false" onAction="#handleForgetClicked" prefHeight="45.0" prefWidth="322.0" rippleAnimateBackground="false" rippleAnimationSpeed="0.0" rippleBackgroundOpacity="0.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #29455f;" text="Submit" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic" size="16.0" />
+                           </font>
+                        </MFXButton>
+                         <MFXButton fx:id="BackButton" rippleAnimationSpeed="0.0" rippleBackgroundOpacity="0.0" style="-fx-background-color: transparent; -fx-border-width: 0;" text=" ">
+                             <graphic>
+                                 <ImageView fitHeight="33.0" fitWidth="19.0" nodeOrientation="INHERIT" preserveRatio="true">
+                                     <image>
+                                         <Image url="@Admin/Previous.png" />
+                                     </image>
+                                     <effect>
+                                         <ColorAdjust brightness="0.25" />
+                                     </effect>
+                                 </ImageView>
+                             </graphic>
+                         </MFXButton>
+
+                     </children>
+                  </Pane>
+                    <Label fx:id="errorMessageLabel" alignment="TOP_LEFT" layoutX="54.0" layoutY="401.0" prefHeight="19.0" prefWidth="295.0" textFill="#c34c4c">
+                     <font>
+                        <Font size="11.0" />
+                     </font></Label>
+                  <Label layoutX="163.0" layoutY="40.0" prefHeight="43.0" prefWidth="105.0" text="Sign in" textFill="#656565">
+                     <font>
+                        <Font name="Century Gothic" size="31.0" />
+                     </font>
+                  </Label>
+                   <VBox fx:id="loadingBox" alignment="CENTER" layoutX="336.0" layoutY="164.0" prefHeight="60.0" prefWidth="43.0" spacing="10" visible="false">
+                       <MFXProgressSpinner fx:id="loadingIndicator" prefHeight="25.0" prefWidth="25.0">
+                        <color2>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color2>
+                        <color3>
+                           <Color green="0.49892085790634155" blue="0.949999988079071" />
+                        </color3>
+                        <color4>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color4>
+                     </MFXProgressSpinner>
+                   </VBox>
+               </children>
+            </Pane>
+            <Pane layoutX="537.0" layoutY="-20.0" prefHeight="720.0" prefWidth="501.0" style="-fx-background-color: #29455f; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: white;">
+               <children>
+
+                   <ImageView fx:id="Exit" fitHeight="18.0" fitWidth="19.0" layoutX="469.0" layoutY="14.0" nodeOrientation="INHERIT" onMouseClicked="#handleExitClicked" preserveRatio="true">
+                       <image>
+                           <Image url="@Admin/Exit.png" />
+                       </image>
+                       <effect>
+                           <ColorAdjust brightness="0.91" contrast="0.07" saturation="-0.24" />
+                       </effect>
+                   </ImageView>
+
+                   <ImageView fx:id="Minimize" fitHeight="28.0" fitWidth="19.0" layoutX="439.0" layoutY="9.0" nodeOrientation="INHERIT" onMouseClicked="#handleMinimizeClicked">
+                       <image>
+                           <Image url="@Admin/Minimize.png" />
+                       </image>
+                       <effect>
+                           <ColorAdjust brightness="1.0" contrast="0.02" saturation="-0.24" />
+                       </effect>
+                   </ImageView>
+                   <ImageView fitHeight="71.0" fitWidth="315.0" layoutX="99.0" layoutY="155.0" nodeOrientation="INHERIT" preserveRatio="true">
+                       <image>
+                           <Image url="@Admin/EssectFigures1.png" />
+                       </image>
+                       <effect>
+                           <ColorAdjust brightness="1.0" />
+                       </effect>
+                   </ImageView>
+                   <ImageView fitHeight="117.0" fitWidth="374.0" layoutX="75.0" layoutY="408.0" nodeOrientation="INHERIT" preserveRatio="true">
+                       <image>
+                           <Image url="@Admin/EssectFigures2.png" />
+                       </image>
+                       <effect>
+                           <ColorAdjust brightness="1.0" />
+                       </effect>
+                   </ImageView>
+                  <Label layoutX="219.0" layoutY="88.0" prefHeight="34.0" prefWidth="93.0" text="In Figures" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic" size="18.0" />
+                     </font></Label>
+                  <Label layoutX="70.0" layoutY="297.0" text="Students in training" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="300.0" layoutY="297.0" text="Permanent Professors" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="65.0" layoutY="530.0" text="Research structures" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="347.0" layoutY="528.0" text="Partners" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="StudentLabelCount" layoutX="112.0" layoutY="234.0" textFill="#84d6ff">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ProfessorLabelCount" layoutX="358.0" layoutY="234.0" textFill="#84d6ff">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="PartnerLabelCount" layoutX="118.0" layoutY="480.0" textFill="#84d6ff">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                   <ImageView fitHeight="57.0" fitWidth="43.0" layoutX="265.0" layoutY="652.0" nodeOrientation="INHERIT" onMouseClicked="#handleGithubClick" preserveRatio="true">
+                       <image>
+                           <Image url="@Admin/Github.png" />
+                       </image>
+                       <effect>
+                           <ColorAdjust brightness="1.0" />
+                       </effect>
+                   </ImageView>
+                   <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="118.0" layoutY="657.0" nodeOrientation="INHERIT" onMouseClicked="#handleLinkedinClick" preserveRatio="true">
+                       <image>
+                           <Image url="@Admin/Linkedin.png" />
+                       </image>
+                     <effect>
+                        <ColorAdjust brightness="1.0" />
+                     </effect>
+                   </ImageView>
+                  <Label fx:id="ResearchLabelCount" layoutX="369.0" layoutY="478.0" textFill="#84d6ff">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="118.0" layoutY="612.0" prefHeight="45.0" prefWidth="301.0" text="The application developed as part of a summer project" textFill="WHITE" wrapText="true" />
+                   <Label fx:id="Linkedin" layoutX="150.0" layoutY="668.0" onMouseClicked="#handleLinkedinClick" prefHeight="17.0" prefWidth="93.0" text="melekelmoula" textFill="WHITE">
+                       <font>
+                           <Font name="Century Gothic" size="12.0" />
+                       </font>
+                   </Label>
+                   <Label fx:id="Github" layoutX="310.0" layoutY="668.0" onMouseClicked="#handleGithubClick" prefHeight="17.0" prefWidth="93.0" text="melekelmoula" textFill="WHITE">
+                       <font>
+                           <Font name="Century Gothic" size="12.0" />
+                       </font>
+                   </Label>
+                    <ImageView fitHeight="51.0" fitWidth="198.0" layoutX="166.0" layoutY="37.0" nodeOrientation="INHERIT">
+                        <image>
+                            <Image url="@Admin/Essect_Logo.png" />
+                        </image>
+                        <effect>
+                            <ColorAdjust brightness="1.0" />
+                        </effect>
+                    </ImageView>
+
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</Pane>

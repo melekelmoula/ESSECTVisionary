@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="MainPage" prefHeight="727.0" prefWidth="1080.0" style="-fx-border-width: 0; -fx-border-color: white; -fx-background-radius: 44; -fx-border-radius: 43;" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.devmate.java.DashBoardController">
+    <children>
+    <ImageView fx:id="Background" blendMode="SRC_ATOP" fitHeight="723.0" fitWidth="1078.0" layoutX="1.0" layoutY="2.0" nodeOrientation="INHERIT">
+        <image>
+            <Image url="@Background.png" />
+        </image>
+      <effect>
+         <ColorAdjust brightness="-0.23" contrast="-0.54" hue="0.04" saturation="-0.27" />
+      </effect>
+
+          </ImageView>
+
+        <Button fx:id="ExitButton" contentDisplay="CENTER" layoutX="1022.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleExitClicked" prefHeight="36.0" prefWidth="44.0" style="-fx-background-color: transparent;" text=" " textFill="TRANSPARENT">
+            <graphic>
+                <ImageView fx:id="Exit" fitHeight="18.0" fitWidth="19.0" layoutX="1030.0" layoutY="15.0" nodeOrientation="INHERIT" preserveRatio="true">
+                    <image>
+                        <Image url="@Exit.png" />
+                    </image>
+                    <effect>
+                        <ColorAdjust brightness="0.91" contrast="0.07" saturation="-0.24" />
+                    </effect>
+                </ImageView>
+            </graphic>
+        </Button>
+
+        <Button fx:id="MinimizeButton" contentDisplay="CENTER" layoutX="980.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleMinimizeClicked" prefHeight="36.0" prefWidth="44.0" style="-fx-background-color: transparent;" text=" " textFill="TRANSPARENT">
+            <graphic>
+                <ImageView fx:id="Minimize" fitHeight="28.0" fitWidth="19.0" layoutX="995.0" layoutY="12.0" nodeOrientation="INHERIT">
+                    <image>
+                        <Image url="@Minimize.png" />
+                    </image>
+                    <effect>
+                        <ColorAdjust brightness="1.0" contrast="0.02" saturation="-0.24" />
+                    </effect>
+                </ImageView>
+            </graphic>
+        </Button>
+
+
+        <ImageView fitHeight="67.0" fitWidth="259.0" layoutX="48.0" layoutY="26.0">
+                  <image>
+                     <Image url="@Essect_Logo.png" />
+                  </image>
+      <effect>
+         <ColorAdjust brightness="1.0" contrast="0.02" saturation="-0.24">
+            <input>
+               <Reflection fraction="0.6" topOpacity="0.11" />
+            </input>
+         </ColorAdjust>
+      </effect>
+
+
+
+               </ImageView>
+
+
+               <Button fx:id="Pathbutton" alignment="TOP_LEFT" contentDisplay="RIGHT" disable="true" layoutX="334.0" layoutY="52.0" onAction="#PathTable" prefHeight="35.0" prefWidth="58.0" style="-fx-background-color: transparent;" text="Path" textFill="WHITE" visible="false" wrapText="true">
+                  <font>
+                     <Font name="Segoe UI Historic" size="16.0" />
+                  </font>
+               </Button>
+               <Button fx:id="Professorbutton" alignment="CENTER_RIGHT" contentDisplay="CENTER" disable="true" layoutX="468.0" layoutY="52.0" onAction="#ProfessorTable" prefHeight="35.0" prefWidth="97.0" style="-fx-background-color: transparent;" text="Professors" textFill="WHITE" visible="false">
+                  <font>
+                     <Font name="Segoe UI Historic" size="16.0" />
+                  </font>
+               </Button>
+               <Button fx:id="Subjectbutton" alignment="TOP_LEFT" contentDisplay="CENTER" disable="true" layoutX="392.0" layoutY="52.0" onAction="#SubjectsTable" prefHeight="35.0" prefWidth="84.0" style="-fx-background-color: transparent;" text="Subjects" textFill="WHITE" visible="false">
+                  <font>
+                     <Font name="Segoe UI Historic" size="16.0" />
+                  </font>
+               </Button>
+               <Button fx:id="Studentbutton" alignment="TOP_LEFT" disable="true" layoutX="572.0" layoutY="52.0" onAction="#StudentTable" prefHeight="35.0" prefWidth="90.0" style="-fx-background-color: transparent;" text="Students" textFill="WHITE" visible="false">
+                  <font>
+                     <Font name="Segoe UI Historic" size="16.0" />
+                  </font>
+               </Button>
+   <Button fx:id="Groupbutton" alignment="TOP_LEFT" contentDisplay="CENTER" disable="true" layoutX="653.0" layoutY="52.0" onAction="#GroupsTable" prefHeight="35.0" prefWidth="78.0" style="-fx-background-color: transparent;" text="Groups" textFill="WHITE" visible="false">
+      <font>
+         <Font name="Segoe UI Historic" size="16.0" />
+      </font>
+   </Button>
+              <MFXToggleButton fx:id="toggleButton" alignment="CENTER" contentDisplay="TOP" ellipsisString="" graphicTextGap="0.0" layoutX="765.0" layoutY="47.0" length="40.0" lineSpacing="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ThemeChange" prefHeight="45.0" prefWidth="44.0" scaleY="1.13" selected="true" text="Theme" textFill="RED" textOverrun="CLIP">
+      <font>
+         <Font size="9.0" />
+      </font>
+      <effect>
+         <ColorAdjust brightness="-0.86" contrast="-0.01" saturation="-1.0" />
+      </effect>
+
+                                </MFXToggleButton>
+            <Pane fx:id="contentArea" cache="true" cacheHint="SCALE" depthTest="DISABLE" layoutX="72.0" layoutY="130.0" style="-fx-background-color: Transparent;" />
+
+
+                     <ImageView fx:id="Logout" fitHeight="41.0" fitWidth="137.0" layoutX="871.0" layoutY="49.0" onMouseClicked="#logoutClicked" preserveRatio="true">
+                  <image>
+                     <Image url="@Logout.png" />
+                  </image>
+      <effect>
+         <ColorAdjust brightness="1.0" contrast="0.01" hue="-0.02" saturation="-0.01" />
+      </effect>
+               </ImageView>
+   <Button fx:id="Exam" alignment="TOP_LEFT" contentDisplay="RIGHT" disable="true" layoutX="450.0" layoutY="52.0" onAction="#Quiz" prefHeight="35.0" prefWidth="67.0" style="-fx-background-color: transparent;" text="Exams" textFill="WHITE" visible="false" wrapText="true">
+      <font>
+         <Font name="Segoe UI Historic" size="16.0" />
+      </font>
+   </Button>
+
+   <Button fx:id="Results" alignment="TOP_LEFT" contentDisplay="RIGHT" disable="true" layoutX="550.0" layoutY="52.0" onAction="#Results" prefHeight="35.0" prefWidth="84.0" style="-fx-background-color: transparent;" text="Results" textFill="WHITE" visible="false" wrapText="true">
+      <font>
+         <Font name="Segoe UI Historic" size="16.0" />
+      </font>
+   </Button>
+   <Button fx:id="Exams" alignment="TOP_LEFT" contentDisplay="RIGHT" disable="true" layoutX="468.0" layoutY="52.0" onAction="#Exams" prefHeight="35.0" prefWidth="78.0" style="-fx-background-color: transparent;" text="Exams" textFill="WHITE" visible="false" wrapText="true">
+      <font>
+         <Font name="Segoe UI Historic" size="16.0" />
+      </font>
+   </Button>
+      <Button fx:id="Result" alignment="TOP_LEFT" contentDisplay="RIGHT" disable="true" focusTraversable="false" layoutX="540.0" layoutY="52.0" onAction="#Result" prefHeight="35.0" prefWidth="78.0" style="-fx-background-color: transparent;" text="Results" textFill="WHITE" visible="false" wrapText="true">
+         <font>
+            <Font name="Segoe UI Historic" size="16.0" />
+         </font>
+      </Button>
+
+    </children>
+         </Pane>

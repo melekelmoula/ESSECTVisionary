@@ -1,0 +1,261 @@
+.tree-table-view .column-header {
+    -fx-font-size: 14px;
+    -fx-background-color: #F8F8F8;
+    -fx-mid-text-color: #181818;
+    -fx-padding: 0px 0px 0px 0px;
+    -fx-border-color: transparent transparent transparent transparent !important;
+    -fx-border-width: 0px 0px 1px 0px!important;
+    -fx-alignment: CENTER;
+    -fx-spacing: 60px;
+    -fx-font-family: "Arial";
+
+}
+
+.tree-table-view {
+    -fx-background-insets: 0;
+    -fx-background-color: #F8F8F8;
+    -fx-mid-text-color: #181818;
+    -fx-text-fill: white;
+    -fx-border-insets: 0;
+    -fx-border-color: transparent transparent transparent transparent  !important;
+    -fx-border-width: 0px 0px 1px 0px  !important;
+}
+
+
+
+#Panel{
+    -fx-background-color: #F8F8F8;
+    -fx-border-color: black;
+}
+
+.table-cell {
+    -fx-background-insets: 0, 0;
+    -fx-border-width: 0px;
+    -fx-text-fill: black;
+    -fx-alignment: CENTER;
+}
+
+.tree-table-cell {
+    -fx-background-insets: 0, 0;
+    -fx-border-width: 0px;
+    -fx-text-fill: black;
+    -fx-alignment: CENTER;
+}
+
+#EditingPanel {
+    -fx-background-color: #F8F8F8;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-padding: 0;
+    -fx-border-width: 1px 0 1px 0;
+}
+
+.scrollpane {
+    -fx-background-color: #F8F8F8;
+}
+
+.countdown {
+    -fx-text-fill: #181818;
+}
+
+.Test-submit {
+    -fx-background-color: #F8F8F8;
+    -fx-text-fill: #272727;
+    -fx-border-color: #979B9C;
+    -fx-border-width: 1px;
+    -fx-background-radius: 10px; /* Adjust the radius as needed */
+    -fx-border-radius: 10px;
+}
+
+.combo-box-base .arrow {
+    -fx-background-color: #272727; /* Change the arrow color to red */
+}
+
+.combo-box-popup {
+    -fx-background-color: #F8F8F8; /* Change the pop-up menu background color to red */
+}
+.combo-box-popup .list-cell {
+    -fx-background-color: #F8F8F8; /* Change the background color of each item in the pop-up menu */
+    -fx-text-fill: #181818; /* Optionally, change the text color */
+}
+
+.combo-box .list-view .list-cell {
+    -fx-font-size: 12px; /* Adjust the size as needed */
+    -fx-padding: 9px;   /* Add padding around the text */
+
+}
+
+
+.combo-box .list-view .list-cell:selected {
+    -fx-background-color :  #29455f;  /* Cadet Blue */
+    -fx-text-fill: white;
+}
+
+
+.mfx-date-picker {
+    -fx-background-color: transparent;  /* Background color of the date picker */
+    -fx-text-fill: #B9B9B9;         /* Text color */
+    -fx-border-color: transparent;
+    -fx-border-width: 0; /* Adjust the bottom border width */
+}
+
+.GradeLabel {
+    -fx-text-fill: #181818;
+}
+
+#subjectLabel{
+    -fx-mid-text-color: black; /* Note: This property might not exist in JavaFX, double-check for correct property */
+    -fx-text-fill: black;
+}
+
+.combo-box-base {
+    -fx-background-color: transparent;  /* Background color of the combo box */
+    -fx-text-fill: #4d4d4d;         /* Text color */
+    -fx-mid-text-color: #4d4d4d;
+    -fx-border-color: transparent ;
+    -fx-border-width: 0 ; /* Adjust the bottom border width */
+}
+
+.spinner {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #4d4d4d transparent;
+    -fx-border-width: 0 0 2px 0; /* Adjust the bottom border width */
+}
+
+.spinner .text-field {
+    -fx-background-color: transparent;
+    -fx-border-width: 0; /* Remove border from TextField */
+    -fx-focus-color: transparent; /* Remove focus border */
+}
+
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: transparent;
+    -fx-border-width: 0; /* Remove borders from arrow buttons */
+}
+
+.spinner .arrow-button {
+    -fx-border-width: 0; /* Remove arrow button border */
+    -fx-background-color: transparent; /* Remove arrow button background */
+}
+
+.spinner .increment-arrow,
+.spinner .decrement-arrow {
+    -fx-background-color: #4d4d4d;
+    -fx-border-width: 0; /* Remove borders from arrow buttons */
+}
+
+.text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: #4d4d4d;
+    -fx-prompt-text-fill: #4d4d4d; /* Color for the prompt text */
+    -fx-border-color: transparent transparent #4d4d4d transparent;
+    -fx-border-width: 0 0 2px 0; /* Adjust the bottom border width */
+}
+
+.mfx-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-border-color: transparent;
+    -fx-border-width: 0px;
+}
+
+#CustomMFXCombo {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-mid-text-color: #B9B9B9;
+    -fx-pref-width: 180;
+    -fx-pref-height: 25;
+    -fx-border-width: 0;
+}
+
+#CustomMFXcheck {
+    -fx-text-fill: black;
+    -fx-mid-text-color: black;
+    -fx-border-color: transparent transparent #4d4d4d transparent;
+    -fx-border-width: 0 0 2px 0;
+}
+
+#mfx-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-border-color: transparent;
+    -fx-border-width: 0px;
+    -fx-mid-text-color: black;
+}
+
+.combo-popup {
+    -fx-background-color: red;
+
+}
+
+#errorMessageLabel {
+    -fx-mid-text-color: #CE6C6C; /* Note: This property might not exist in JavaFX, double-check for correct property */
+    -fx-text-fill: #CE6C6C;
+}
+
+.tree-table-view .scroll-bar {
+    -fx-background-color: transparent; /* Set your desired background color */
+    /* Adjust padding to increase height */
+    -fx-background-insets: 0;
+}
+
+.tree-table-view .filler {
+    -fx-background-color: #F8F8F8; /* Set your desired background color */
+}
+
+.tree-table-view .scroll-bar .track {
+    -fx-background-color: transparent; /* Set background color of the track */
+}
+
+.tree-table-view .scroll-bar .thumb {
+    -fx-background-color: #535353; /* Set pressed background color of the thumb */
+    -fx-scale-x: 0.4;
+}
+
+.tree-table-view .increment-arrow,
+.tree-table-view .decrement-arrow {
+    -fx-background-color: transparent; /* Set color of the arrows */
+}
+
+.light-theme-row {
+    -fx-background-color: #F8F8F8;
+    -fx-padding: 10px 0px 10px 0px;
+    -fx-text-fill: black;
+    -fx-border-width: 0px;
+    -fx-border-insets: 0;
+}
+
+.selected-row {
+    -fx-background-color: #8AA1B4;
+    -fx-padding: 10px 0px 10px 0px;
+    -fx-border-width: 0px;
+    -fx-border-insets: 0;
+    -fx-background-insets: 0;
+}
+
+.text-area {
+    -fx-text-fill: black; /* Text color */
+    -fx-border-width: 0px; /* Remove border */
+    -fx-border-color: transparent; /* Make border transparent */
+    -fx-focus-color: transparent; /* Remove focus color */
+    -fx-faint-focus-color: transparent; /* Remove faint focus color */
+    -fx-background-color: #F8F8F8; /* Background color */
+    -fx-background-insets: 0; /* Remove any background insets */
+    -fx-padding: 0; /* Remove padding */
+}
+
+.text-area .content {
+    -fx-background-color: #F8F8F8; /* Background color for the content */
+
+}
+
+.text-area .scroll-pane .viewport {
+    -fx-background-color: #272727; /* Ensure scroll pane viewport has the same background color */
+}
+
+
+
+
+
+

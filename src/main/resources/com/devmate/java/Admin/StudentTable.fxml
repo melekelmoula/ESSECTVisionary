@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.*?>
+<?import io.github.palexdev.materialfx.controls.legacy.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="Panel" fx:id="Panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="933.0" style="-fx-border-radius: 35; -fx-border-color: black; -fx-background-radius: 35; -fx-border-width: 0;" stylesheets="@LightTheme.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.devmate.java.Admin.AdminStudentTableController">
+
+    <children>
+        <TreeTableView fx:id="Table" editable="true" fixedCellSize="0.0" layoutX="31.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="443.0" prefWidth="861.0">
+            <columns>
+                <TreeTableColumn fx:id="usernameColumn" prefWidth="105.0" text="Username" />
+                <TreeTableColumn fx:id="passwordColumn" prefWidth="105.0" text="Password" />
+                <TreeTableColumn fx:id="nameColumn" prefWidth="105.0" text="Email" />
+                <TreeTableColumn fx:id="BirthdayColumn" prefWidth="105.0" text="Birthdate" />
+                <TreeTableColumn fx:id="GenderColumn" text="Gender" />
+                <TreeTableColumn fx:id="pathColumn" prefWidth="121.0" text="Path" />
+                <TreeTableColumn fx:id="groupColumn" prefWidth="100.0" text="Group" />
+                <TreeTableColumn fx:id="ScoreColumn" prefWidth="127.0" text="Final Grade" />
+            </columns>
+        </TreeTableView>
+        <Pane fx:id="EditingPanel" cache="true" focusTraversable="true" layoutX="29.0" layoutY="460.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="93.0" prefWidth="875.0" scaleShape="false" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="459.0">
+            <children>
+                <MFXLegacyComboBox fx:id="GroupComboBox" disable="true" layoutX="670.0" layoutY="31.0" prefHeight="26.0" prefWidth="81.0" visible="false">
+               <effect>
+                  <ColorAdjust brightness="0.05" hue="-0.21" />
+               </effect></MFXLegacyComboBox>
+
+                <MFXLegacyComboBox fx:id="PathComboBox" focusTraversable="false" layoutX="715.0" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="72.0">
+               <effect>
+                  <ColorAdjust brightness="0.05" hue="-0.21" />
+               </effect></MFXLegacyComboBox>
+                <TextField fx:id="newEmailField" focusTraversable="false" layoutX="305.0" layoutY="35.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="26.0" prefWidth="150.0" promptText="Email" />
+                <TextField fx:id="newUsernameField" focusTraversable="false" layoutX="14.0" layoutY="35.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="120.0" promptText="Username" />
+
+                <TextField fx:id="newPasswordField" focusTraversable="false" layoutX="160.0" layoutY="35.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="120.0" promptText="Password" />
+
+                <MFXButton fx:id="AddButton" contentDisplay="CENTER" depthLevel="LEVEL4" layoutX="816.0" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="44.0" rippleAnimateBackground="false" rippleColor="#dadada" text=" " textFill="TRANSPARENT">
+                    <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="34.0" preserveRatio="true">
+                            <image>
+                                <Image url="@Add.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="0.01" />
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                </MFXButton>
+                <MFXButton fx:id="UpdateButton" depthLevel="LEVEL4" disable="true" layoutX="787.0" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="44.0" rippleAnimateBackground="false" rippleColor="#dadada" text=" " textFill="TRANSPARENT" visible="false">
+                    <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="31.0" preserveRatio="true">
+                            <image>
+                                <Image url="@Update.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="0.1" />
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                </MFXButton>
+                <MFXButton fx:id="DeleteButton" contentDisplay="CENTER" depthLevel="LEVEL4" disable="true" layoutX="830.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="44.0" rippleAnimateBackground="false" rippleColor="#dadada" text=" " textFill="TRANSPARENT" visible="false">
+                    <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="25.0" nodeOrientation="INHERIT" preserveRatio="true">
+                            <image>
+                                <Image url="@Exit.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="0.02" />
+                            </effect>
+
+                        </ImageView>
+                    </graphic>
+                </MFXButton>
+                <Label fx:id="errorMessageLabel" alignment="TOP_LEFT" layoutX="29.0" layoutY="66.0" prefHeight="17.0" prefWidth="492.0" />
+                <MFXDatePicker fx:id="Birthdate" borderGap="0.0" caretVisible="false" focusTraversable="false" graphicTextGap="0.0" layoutX="475.0" layoutY="38.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" popupOffsetY="0.0" prefHeight="26.0" prefWidth="140.0">
+               <effect>
+                  <ColorAdjust brightness="0.05" hue="-0.35" />
+               </effect></MFXDatePicker>
+                <MFXLegacyComboBox fx:id="GenderCombobox" focusTraversable="false" layoutX="620.0" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="72.0">
+               <effect>
+                  <ColorAdjust brightness="0.05" hue="-0.21" />
+               </effect></MFXLegacyComboBox>
+                <MFXProgressSpinner fx:id="loadingIndicator" layoutX="817.0" layoutY="31.0" prefHeight="36.0" prefWidth="31.0" visible="false">
+                    <color2>
+                        <Color red="0.4000000059604645" green="0.3919999897480011" blue="0.3919999897480011" opacity="0.0" />
+                    </color2>
+                    <color3>
+                        <Color green="0.49892085790634155" blue="0.949999988079071" />
+                    </color3>
+                    <color4>
+                        <Color red="0.23000000417232513" green="0.22310000658035278" blue="0.22310000658035278" opacity="0.0" />
+                    </color4>
+                </MFXProgressSpinner>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
